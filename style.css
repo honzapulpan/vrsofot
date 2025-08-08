@@ -1,3 +1,4 @@
+/* Import custom font */
 @font-face {
     font-family: 'BohemianTypewriter';
     src: url('bohemian-typewriter.regular.ttf') format('truetype');
@@ -5,6 +6,7 @@
     font-style: normal;
 }
 
+/* Basic styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +15,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: white;        /* VRÁCENO: Bílé pozadí */
+    color: black;                   /* VRÁCENO: Černý text */
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif; /* NOVÁ DEFINICE */
+    
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,63 +28,218 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 1200px;        /* NOVÁ ZMĚNA: Maximum šířka pro velké monitory */
-    margin: 0 auto;           /* NOVÁ ZMĚNA: Centrování kontejneru */
+    max-width: 980px;
+    margin: 0 auto;
 }
 
-.header {
+/* Header with title */
+header {
     text-align: center;
     padding: 20px 0;
 }
 
 .main-title {
-    font-family: 'BohemianTypewriter', serif;
-    font-size: 8rem;           /* Zvětšeno z 4rem na 8rem pro větší šířku */
+    font-family: 'Bohemian Typewriter', monospace; /* NEMĚNIT! */
+    font-size: 9rem;
     font-weight: normal;
     width: 100%;
     margin: 0;
     letter-spacing: 0.1em;
-    color: #444;               /* Změněno na tmavší šedou barvu */
+    color: #444;                    /* VRÁCENO: Tmavě šedá barva pro nadpis */
 }
 
-.main-content {
+/* Text between title and photo */
+.subtitle-section {
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.subtitle-text {
+    font-size: 1.2rem;
+    color: black;                   /* VRÁCENO: Černý text */
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Main section */
+main {
     flex: 1;
-    width: 100%;
-}
-
-.image-container {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
+/* Image */
 .main-image {
-    width: 90%;               /* NOVÁ ZMĚNA: Změněno z 100% na 90% pro bílé okraje */
-    max-width: 90%;           /* NOVÁ ZMĚNA: Zajistí max-width také 90% */
+    width: 80%;                     /* ZMĚNĚNO: Ze 100% na 80% */
+    max-width: 80%;                 /* ZMĚNĚNO: Ze 100% na 80% */
     height: auto;
     display: block;
-    margin: 0 auto;           /* NOVÁ ZMĚNA: Centrování obrázku */
+    margin: 0 auto;
 }
 
-.footer {
+/* Paragraph below the photo */
+.content-section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.content-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;                   /* VRÁCENO: Černý text */
+    text-align: justify;
+    max-width: 80%;                 /* ZMĚNĚNO: Ze 100% na 80% */
+    margin: 0 auto;
+}
+
+/* Price table */
+.price-table-section {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.price-table {
+    width: 100%;                     /* ZMĚNĚNO: Z 90% na 80% */
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.price-table td {
+    padding: 12px 15px;
+    text-align: left;
+    color: black;                   /* VRÁCENO: Černý text */
+    border: none;
+}
+
+.price-table td:first-child {
+    width: 70%;
+}
+
+.price-table td:last-child {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Contact section */
+.contact-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.contact-link {
+    color: black;                   /* VRÁCENO: Černý text */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
     text-align: center;
     padding: 20px 0;
     margin-top: auto;
 }
 
 .copyright {
-    font-size: 12px;
-    color: #666;
+    font-size: 14px;
+    color: #444;
 }
 
-/* Responzivní design */
+/* Responsive styles */
 @media (max-width: 768px) {
     .main-title {
-        font-size: 5rem;      /* Zvětšeno z 2.5rem na 5rem */
+        font-size: 5rem;
+    }
+
+    .subtitle-text {
+        font-size: 1rem;
+        white-space: normal;
+    }
+
+    .content-text, .final-text {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    .price-table {
+        width: 85%;
+        font-size: 0.9rem;
+    }
+
+    .contact-section {
+        gap: 12px;
+    }
+
+    .contact-link {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .main-title {
-        font-size: 3rem;      /* Zvětšeno z 2rem na 3rem */
+        font-size: 3rem;
+    }
+
+    .subtitle-text {
+        font-size: 0.9rem;
+    }
+
+    .content-text, .final-text {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .price-table {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
+    .price-table td {
+        padding: 8px 10px;
+    }
+
+    .contact-section {
+        gap: 10px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .contact-link {
+        font-size: 0.8rem;
     }
 }
