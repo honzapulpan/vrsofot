@@ -39,7 +39,7 @@ header {
 }
 
 .main-title {
-    font-family: 'Bohemian Typewriter', monospace; /* NEMĚNIT! */
+    font-family: 'BohemianTypewriter', monospace; /* NEMĚNIT! */
     font-size: 9rem;
     font-weight: normal;
     width: 100%;
