@@ -93,7 +93,7 @@ main {
     line-height: 1.6;
     color: black;                   /* VRÁCENO: Černý text */
     text-align: justify;
-    max-width: 80%;                 /* ZMĚNĚNO: Ze 100% na 80% */
+    max-width: 74%;                 /* ZMĚNĚNO: Ze 100% na 80% */
     margin: 0 auto;
 }
 
@@ -101,11 +101,12 @@ main {
 .price-table-section {
     padding: 20px;
     margin-bottom: 30px;
+    width: 74%;
 }
 
 .price-table {
     width: 100%;                     /* ZMĚNĚNO: Z 90% na 80% */
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     border-collapse: collapse;
     font-size: 1rem;
