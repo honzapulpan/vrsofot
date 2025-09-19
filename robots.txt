@@ -1,0 +1,22 @@
+# Robots.txt pro vrsofot.cz
+# Vytvoreno: 19.9.2025
+
+User-agent: *
+Allow: /
+
+# Hlavní sitemap
+Sitemap: https://vrsofot.cz/sitemap.xml
+
+# Neindexovat případné administrační složky
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.pdf$
+
+# Povolit všem botům přístup k obrázkům
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /img/
+
+# Crawl-delay pro méně důležité boty
+User-agent: *
+Crawl-delay: 1
