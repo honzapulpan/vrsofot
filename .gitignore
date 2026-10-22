@@ -1,0 +1,20 @@
+# Vše mimo soubory základního webu
+/*
+
+# Web
+!index.html
+!style.css
+!photo.jpg
+!bohemian-typewriter.regular.ttf
+
+# Nasazení a vyhledávače
+!CNAME
+!robots.txt
+!sitemap.xml
+!README.md
+
+!.gitignore
+
+# Systémové soubory
+.DS_Store
+Thumbs.db
